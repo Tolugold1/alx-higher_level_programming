@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def islower(c):
     for i in range(97, 123):
-        if c == chr(i):
-            return "True"
+        if chr(97) <= c <= chr(123):
+            return True
         else:
-            return "False"
+            return False
