@@ -7,3 +7,4 @@ def uppercase(str):
             print("{}".format(chr(ord(i) - casechangevalue)), end='')
         else:
             print("{}".format(i), end='')
+    print()
