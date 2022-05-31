@@ -10,4 +10,4 @@ def uppercase(str):
             casechangevalue = 0
             t = i
         strg = strg + t
-    print("{} ".format(strg))
+    print("{}".format(strg))
