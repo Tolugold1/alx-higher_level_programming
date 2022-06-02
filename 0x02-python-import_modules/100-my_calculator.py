@@ -13,6 +13,8 @@ def main():
             print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
         else:
+            a = argv[1]
+            b = argv[2]
             if argv[2] == '+':
                 print("{} + {} = {}".format(argv[1], argv[3], add(int(argv[1]), int(argv[3]))))
             elif argv[2] == '-':
