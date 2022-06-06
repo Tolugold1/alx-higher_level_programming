@@ -10,10 +10,7 @@ def no_c(my_string):
                 list_str.remove("c")
             elif j == 'C':
                 list_str.remove("C")
-            else:
-                list_str = list_str
-        for k in list_str:
-            new_string += str(k)
+        new_string = new_string.join(list_str)
         return new_string
     else:
         return None
