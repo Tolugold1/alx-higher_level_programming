@@ -1,7 +1,10 @@
 #ifndef LISTS_H
 #define LISTS_H
 
+<<<<<<< HEAD
+=======
 #include <stdlib.h>
+>>>>>>> 149c3f2550ea6e3f3d5d9d94b581274ea0fd052d
 #include <stddef.h>
 /**
  * struct listint_s - singly linked list
@@ -23,4 +26,8 @@ void free_listint(listint_t *head);
 
 listint_t *insert_node(listint_t **head, int number);
 
+<<<<<<< HEAD
+#endif
+=======
 #endif /* LISTS_H */
+>>>>>>> 149c3f2550ea6e3f3d5d9d94b581274ea0fd052d
