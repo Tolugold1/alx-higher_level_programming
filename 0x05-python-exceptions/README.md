@@ -5,3 +5,4 @@
 | :---: | :---: |
 | **def safe_print_list(my_list=[], x=0)** | function that prints x elements of a list. |
 | **def safe_print_integer(value)** | function that prints an integer with "{:d}".format(). |
+| **def safe_print_list_integers(my_list=[], x=0)** |  function that prints the first x elements of a list and only integers. x can be bigger than the length of my_list - if it’s the case, an exception is expected to occur |
