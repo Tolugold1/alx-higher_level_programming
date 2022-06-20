@@ -13,5 +13,5 @@ def safe_print_list_integers(my_list=[], x=0):
             len += 1
         print()
         return j
-    except:
-        print('IndexError: list index out of range')
+    except (ValueError, TypeError):
+        print()
