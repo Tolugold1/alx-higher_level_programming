@@ -10,3 +10,5 @@
 | **def list_division(my_list_1, my_list_2, list_length)** |  function that divides element by element 2 lists. |
 | **def raise_exception()** | function that raises a type exception. |
 | **def raise_exception_msg(message="")** |  function that raises a name exception with a message. |
+| **def safe_print_integer_err(value)** | function that prints an integer. |
+| **def safe_function(fct, *args)** | function that executes a function safely. |
