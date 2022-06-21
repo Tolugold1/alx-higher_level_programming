@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 class Square:
+    """class Square that defines a square by: (based on 2-square.py)"""
     def __init__(self, size=0):
+        """test if size meet some requirement"""
         if isinstance(size, int) == 0:
             raise TypeError("size must be an integer")
         elif size < 0:
@@ -8,4 +10,5 @@ class Square:
         self.__size = size
 
     def area(self):
+        """compute square of size"""
         return self.__size ** 2
