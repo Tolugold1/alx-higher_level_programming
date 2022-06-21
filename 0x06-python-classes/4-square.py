@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 class Square:
+    """class Square that defines a square by: (based on 3-square.py)"""
     def __init__(self, size=0):
         """initialize size"""
         self.__size = size
