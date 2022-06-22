@@ -4,7 +4,6 @@
 
 class Square:
     """class Square that defines a square"""
-    
     def __init__(self, size=0):
         """test if size meet some requirement"""
         if isinstance(size, int) == 0:
