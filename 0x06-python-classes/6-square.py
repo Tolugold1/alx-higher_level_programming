@@ -16,7 +16,7 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """check for size requirments"""
+        """check for size requirements"""
         if type(value) is not int:
             raise TypeError("size must be an integer")
         if value < 0:
@@ -31,7 +31,7 @@ class Square:
     @position.setter
     def position(self, value):
         """test for position requirement"""
-        if value[0] < 0 or value[1] < 0 or type(value) != tuple                or type(value[0]) != int or type(value[1]) != int                or len(value) != 2:
+        if value[0] < 0 or value[1] < 0 or type(value) != tuple                 or type(value[0]) != int or type(value[1]) != int or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
