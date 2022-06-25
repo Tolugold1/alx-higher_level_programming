@@ -8,11 +8,11 @@ def matrix_divided(matrix, div):
     """Function to divide each number in a matrix by a particular number
     """
     answer = 0
-    if type(matrix) is not list:
+    if type(matrix) is not list or len(matrix) == 0:
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
     for i in matrix:
-        if type(i) is not list:
+        if type(i) is not list or len(i) == 0:
             raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
         else:
             for j in i:
