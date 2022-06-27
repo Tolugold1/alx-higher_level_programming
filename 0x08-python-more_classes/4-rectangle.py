@@ -4,6 +4,7 @@
 
 class Rectangle:
     """class Rectangle that compute perimeter and area of a rectangle"""
+
     def __init__(self, width=0, height=0):
         """Initialize class"""
         self.height = height
@@ -19,7 +20,8 @@ class Rectangle:
 
     def __repr__(self):
         """return a string representation of the rectangle"""
-        return "Rectangle({}, {})".format(str(self.__width), str(self.__height))
+        return "Rectangle({}, {})".format(str(self.__width),
+                                          str(self.__height))
 
     @property
     def width(self):
