@@ -7,7 +7,7 @@ max_integer = __import__('6-max_integer').max_integer
 
 
 class TestMaxInteger(unittest.TestCase):
-
+    """Test cases for max_integer"""
     def test_max(self):
         """Test if max int is greater than 1"""
         self.assertGreater(max_integer([2, 4, 1, 5]), 1)
@@ -27,8 +27,6 @@ class TestMaxInteger(unittest.TestCase):
     def test_is(self):
         """Test if max int is the same as 9"""
         self.assertIs(max_integer([1, 4, 2, 6, 9]), 9)
-
-
 
     def test_is_not(self):
         """testing for other datatype"""
