@@ -10,11 +10,12 @@ class Rectangle:
         self.width = width
 
     def __str__(self):
+        """print rectangle according to the width and height"""
         string = ""
         if self.__height == 0 or self.__width == 0:
             return string
         string += ("#" * self.__width + "\n") * self.__height
-        return string
+        return string[:-1]
 
     @property
     def width(self):
