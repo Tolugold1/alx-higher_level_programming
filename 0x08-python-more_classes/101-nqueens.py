@@ -74,6 +74,7 @@ def solve(size):
             row -= 1
             col = 1 + prev_col
 
+
 if len(argv) != 2:
     print('Usage: nqueens N')
     exit(1)
