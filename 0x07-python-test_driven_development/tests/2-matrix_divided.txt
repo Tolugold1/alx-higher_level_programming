@@ -71,3 +71,15 @@ Now use it:
     Traceback (most recent call last):
         ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    Matrix may be an array with only zero
+    >>> matrix_divided([[0]], 4)
+    [[0.0]]
+
+    Testing infinite number
+    >>> matrix_divided([[1, 2], [3, 4]], float('inf'))
+    [[0.0, 0.0], [0.0, 0.0]]
+
+    Testing for not a number
+    >>> matrix_divided([[0]], float('nan'))
+    [[nan]]
