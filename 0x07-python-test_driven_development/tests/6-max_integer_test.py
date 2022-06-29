@@ -14,7 +14,8 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_max_equal(self):
         """Test if max int is equal to 9"""
-        self.assertEqual(max_integer([8, 4, 2, 7, 4, 9]), 9)
+        self.assertEqual(max_integer([9, 4, 2, 7, 4]), 9)
+        self.assertEqual(max_integer([50]), 50)
 
     def test_max_less(self):
         """Test if 47 is less than max"""
