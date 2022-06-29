@@ -10,8 +10,8 @@ text_indentation from the 5-text_indentation module:
      >>> text_indentation = __import__("5-text_indentation").text_indentation
 
 Now use it:
-    it print newline if '.', '?' or ":" is encountered
 
+    it print newline if '.', '?' or ":" is encountered
     >>> text_indentation("This is. a ball")
     This is.
     <BLANKLINE>
@@ -27,20 +27,7 @@ Now use it:
     <BLANKLINE>
     yes, it is
 
-    Altogether
-    >>> text_indentation("This is a ball. question: is this a ball? answer: yes")
-    This is a ball.
-    <BLANKLINE>
-    question:
-    <BLANKLINE>
-    is this a ball?
-    <BLANKLINE>
-    answer:
-    <BLANKLINE>
-    yes
-
     Exceptions
-
     it raise typeError if text is not a string data-type
     >>> text_indentation(123)
     Traceback (most recent call last):
