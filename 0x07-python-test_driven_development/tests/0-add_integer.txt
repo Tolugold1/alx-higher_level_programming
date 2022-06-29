@@ -67,3 +67,15 @@ Now use it:
     Traceback (most recent call last):
         ...
     TypeError: b must be an integer
+
+    test for infinite float number
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+    test for not a number
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
