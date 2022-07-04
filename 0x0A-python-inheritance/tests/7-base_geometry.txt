@@ -1,8 +1,8 @@
 The 7-base_geometry module
-==============
+==============================
 
 Using integer_validator
-------------
+-------------------------
 
 This is add_integer text file in reStructuredText format.  First import
 integer_validator from the 7-base_geometry module:
