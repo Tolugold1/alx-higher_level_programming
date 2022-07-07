@@ -5,6 +5,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """Initialising Rectangle class"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """Class constructor"""
         self.width = width
@@ -15,8 +16,15 @@ class Rectangle(Base):
 
     def __str__(self):
         """return ([Rectangle] (<id>) <x>/<y> - <width>/<height>)"""
-        return ("[Rectangle] {} {}/{} - {}/{}".format(self.id, self.__x,
-                                                      self.__y, self.__width, self.__height))
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                        self.__x, self.__y,
+                                                        self.__width,
+                                                        self.__height))
+
+    def to_dictionary(self):
+        """returns the dictionary representation of a Rectangle"""
+        return ({'id': self.id, 'width': self.__width, 'height': self.__height,
+                 'x': self.__x, 'y': self.__y})
 
     def area(self):
         """return rectangle area"""
@@ -27,18 +35,22 @@ class Rectangle(Base):
         print('\n' * self.__y + (' ' * self.__x + '#' * self.__width + '\n')
               * self.__height, end='')
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
-        if len(args) >= 1:
-            self.id = args[0]
-        if len(args) >= 2:
-            self.__width = args[1]
-        if len(args) >= 3:
-            self.__height = args[2]
-        if len(args) >= 4:
-            self.__x = args[3]
-        if len(args) >= 5:
-            self.__y = args[4]
+        if args:
+            if len(args) >= 1:
+                self.id = args[0]
+            if len(args) >= 2:
+                self.__width = args[1]
+            if len(args) >= 3:
+                self.__height = args[2]
+            if len(args) >= 4:
+                self.__x = args[3]
+            if len(args) >= 5:
+                self.__y = args[4]
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     @property
     def width(self):
