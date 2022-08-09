@@ -1,0 +1,47 @@
+The 5-text_indentation module
+==========================
+
+Using text_indentation
+---------------------
+
+This is print_square text file in reStructuredText format.  First import
+text_indentation from the 5-text_indentation module:
+
+     >>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Now use it:
+
+    it print newline if '.', '?' or ":" is encountered
+    >>> text_indentation("This is. a ball")
+    This is.
+    <BLANKLINE>
+    a ball
+
+    >>> text_indentation("This is: a ball")
+    This is:
+    <BLANKLINE>
+    a ball
+
+    >>> text_indentation("Is this a ball? yes, it is")
+    Is this a ball?
+    <BLANKLINE>
+    yes, it is
+
+    Exceptions
+    it raise typeError if text is not a string data-type
+    >>> text_indentation(123)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation([1, 2, 3])
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+    >>> text_indentation("")

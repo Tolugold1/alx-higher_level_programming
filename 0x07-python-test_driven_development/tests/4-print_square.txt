@@ -1,0 +1,57 @@
+The 4-print_square module
+==========================
+
+Using print_square
+---------------------
+
+This is print_square text file in reStructuredText format.  First import
+print_square from the 4-print_square module:
+
+     >>> print_square = __import__("4-print_square").print_square
+
+Now use it:
+    if integer 4 is passed into the function
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+    if integer 10 is passed
+    >>> print_square(10)
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+
+    Exceptions
+
+    if number less than is passed
+    >>> print_square(-4)
+    Traceback (most recent call last):
+        ...
+    ValueError: size must be >= 0
+
+    if size is a float and less than 0
+    >>> print_square(-4.0)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+    if no argument is passed
+    >>> print_square()
+    Traceback (most recent call last):
+        ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+    if string is passed
+    >>> print_square("4")
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
