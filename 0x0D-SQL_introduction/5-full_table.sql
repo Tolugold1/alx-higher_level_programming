@@ -1,2 +1,2 @@
--- Display the data in the table created earlier
+-- display data in a table
 SELECT * FROM first_table;
