@@ -1,3 +1,4 @@
 -- database and table that has a foreign key reference to state id
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
-CREATE TABLE IF NOT EXISTS hbtn_0d_usa.cities (id INT UNIQUE AUTO_INCREMENT NOT NULL PRIMARY KEY, state_id INT NOT NULL, FOREIGN KEY (state_id) REFERENCES hbtn_0d_usa.states(id)), name VARCHAR(256) NOT NULL; 
+CREATE TABLE IF NOT EXISTS hbtn_0d_usa.cities(id INT NOT NULL AUTO_INCREMENT, state_id INT NOT NULL, name VARCHAR(256) NOT NULL, PRIMARY KEY (id), FOREIGN KEY (state_id) REFERENCES hbtn_0d_usa.states(id));
+
