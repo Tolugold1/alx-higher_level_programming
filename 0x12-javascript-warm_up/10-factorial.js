@@ -2,9 +2,8 @@
 function factorial (n) {
   if (!n || n < 2) {
     return 1;
-   } else {
-     return n * factorial(n - 1);
    }
+   return console.log(n * factorial(n - 1));
 }
 
-console.log(factorial(Number(process.argv[2])));
+factorial(Number(process.argv[2]));
