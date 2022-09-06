@@ -3,7 +3,8 @@ let arg = process.argv;
 if (arg.length < 4) {
   console.log(0);
 } else {
-  let max, second_max;
+  let max;
+  let second_max;
   if (Number(arg[2]) > Number(arg[3])) {
     max = Number(arg[2]);
     second_max = Number(arg[3]);
