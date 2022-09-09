@@ -15,6 +15,6 @@ if __name__ == "__main__":
                 " ON cities.state_id = states.id WHERE "
                 "states.name = '{}'".format(sys.argv[4]))
     result = cur.fetchall()
-    print(", ".join(row for row in result))
+    print(", ".join(row[0] for row in result))
     cur.close()
     db.close()
