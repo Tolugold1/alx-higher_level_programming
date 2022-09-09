@@ -10,7 +10,7 @@ from sqlalchemy import Column, String, Integer
 Base = declarative_base()
 
 
-class States(Base):
+class State(Base):
     """define state"""
     __tablename__ = "states"
     id = Column(Integer, autoincrement=True, unique=True, 
