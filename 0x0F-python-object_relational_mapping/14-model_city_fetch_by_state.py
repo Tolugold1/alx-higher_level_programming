@@ -23,5 +23,4 @@ if __name__ == '__main__':
                                == State.id).order_by(City.id).all():
         print('{}: ({}) {}'.format(st.name, ct.id,
                                  ct.name))
-    session.commit()
     session.close()
