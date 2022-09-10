@@ -7,6 +7,7 @@ class definition of a State and an instance
 if __name__ == '__main__':
     from sqlalchemy import create_engine
     from sqlalchemy.orm import sessionmaker
+    from model_city import City
     from model_state import Base, State
     import sys
 
