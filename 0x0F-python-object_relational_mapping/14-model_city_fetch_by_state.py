@@ -21,6 +21,6 @@ if __name__ == '__main__':
     for ct in session.query(State,
                             City).where(City.state_id ==
                                         State.id).order_by(City.id).all():
-        print('{}: {} {}'.format(ct.State.name, ct.city.id, ct.City.name))
+        print('{}: ({}) {}'.format(ct.State.name, ct.city.id, ct.City.name))
     session.commit()
     session.close()
