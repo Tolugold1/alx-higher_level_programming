@@ -4,6 +4,7 @@ class definition of a State and an instance
  Base = declarative_base()
 """
 
+
 if __name__ == '__main__':
     from sqlalchemy import create_engine
     from sqlalchemy.orm import sessionmaker
@@ -18,9 +19,9 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for st, ct in session.query(State,
-                            City).filter(City.state_id ==
-                                        State.id).order_by(City.id).all():
-        print('{}: ({}) {}'.format(st.name, ct.id, ct.name))
-    session.commit()
+    for st, ct in session.query(
+            State, City).where(City.state_id
+                               == State.id).order_by(City.id).all():
+        print('{}: ({}) {}'.format(st.name, ct.id,
+                                 ct.name))
     session.close()
