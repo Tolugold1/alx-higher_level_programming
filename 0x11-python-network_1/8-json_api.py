@@ -4,6 +4,7 @@ Send a POST request to http://0.0.0.0:5000/search_user with letter as a
 parameter
 """
 
+
 if __name__ == '__main__':
     import requests
     from sys import argv
