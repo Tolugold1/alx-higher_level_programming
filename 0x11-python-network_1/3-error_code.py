@@ -9,7 +9,7 @@ if __name__ == '__main__':
     from sys import argv
     import urllib.error
 
-    url = argv[1]
+    url = urllib.request.Request(argv[1])
     try:
         with urllib.request.urlopen(url) as res:
             file_body = res.read()
