@@ -1,9 +1,18 @@
 #!/usr/bin/node
 const request = require('request')
 
-request(process.argv[2] + '/18', (error, response, body) => {
+request(process.argv[2], (error, response, body) => {
     if (error) {
         throw error
+    } else {
+        let count = 0;
+        for (const filmItem of JSON.parse(body).results) {
+            for (const character in filmItem.characters) {
+                if (character.includes('18')) {
+                    count++
+                }
+            }
+        }
     }
-    process.stdout.write(JSON.parse(body).title)
+    console.log(count);
 })
