@@ -8,7 +8,7 @@ request(url, (error, response, body) => {
     if (error) {
         throw error;
     } else {
-        fs.wirteFile(filePath, body, "utf-8", (err, data) => {
+        fs.wirteFile(filePath, body, "utf8", (err, data) => {
             if (err) {
                 throw err;
             }
