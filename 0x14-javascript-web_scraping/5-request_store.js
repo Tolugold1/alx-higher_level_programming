@@ -6,7 +6,7 @@ request(process.argv[2], (error, response, body) => {
     if (error) {
         throw error;
     } else {
-        fs.wirteFile(process.argv[3], body, "utf8", (err, data) => {
+        fs.writeFile(process.argv[3], body, "utf8", (err, data) => {
             if (err) {
                 throw err;
             }
