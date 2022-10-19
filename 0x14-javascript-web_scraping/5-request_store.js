@@ -2,13 +2,11 @@
 const request = require('request');
 const fs = require('fs');
 
-const url = process.argv[2];
-const filePath = process.argv[3];
-request(url, (error, response, body) => {
+request(process.argv[2], (error, response, body) => {
     if (error) {
         throw error;
     } else {
-        fs.wirteFile(filePath, body, "utf8", (err, data) => {
+        fs.wirteFile(process.argv[3], body, "utf8", (err, data) => {
             if (err) {
                 throw err;
             }
